@@ -21,16 +21,16 @@ namespace ConsoleAppWorkingSearch
 
             SearchServiceClient serviceClient = CreateSearchServiceClient(configuration);
 
-            Console.WriteLine("{0}", "Deleting index...\n");
-            DeleteHotelsIndexIfExists(serviceClient);
+            //Console.WriteLine("{0}", "Deleting index...\n");
+            //DeleteHotelsIndexIfExists(serviceClient);
 
-            Console.WriteLine("{0}", "Creating index...\n");
-            CreateHotelsIndex(serviceClient);
+            //Console.WriteLine("{0}", "Creating index...\n");
+            //CreateHotelsIndex(serviceClient);
 
             ISearchIndexClient indexClient = serviceClient.Indexes.GetClient("hotels");
 
-            Console.WriteLine("{0}", "Uploading documents...\n");
-            UploadDocuments(indexClient);
+            //Console.WriteLine("{0}", "Uploading documents...\n");
+            //UploadDocuments(indexClient);
 
             ISearchIndexClient indexClientForQueries = CreateSearchIndexClient(configuration);
 
